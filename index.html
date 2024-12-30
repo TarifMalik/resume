@@ -1,277 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root{
-    --primary-font-family: "Roboto", sans-serif   ;
-    --secondery-font-family:"Poppins", sans-serif; 
-    --card-bg-color: #141414;
-    --primary-bg-color:#00f5d4  ;
-    --accent-color: #495057 ;
-}
-
-body{
-    font-family: var(--primary-font-family);
-    line-height: 1.4rem;
-    color: white;
-    background-color: black;
-}
-p{  color: var(--accent-color);
-    font-family: var(--secondery-font-family);
-}
-
-.flex{
-    display: flex;
-    align-items: center;
-}
-
-.container{
-    max-width: 1180px;
-    margin-left: auto;
-}
-ul{
-    list-style: none;
-    gap: 20px;
-    cursor: pointer;
-}
-
-.nav-bar{padding-block: 15px;
-    justify-content: space-between;
-    margin-inline: 40px;
-   
-}
-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 2px 2xp 5px #ddd;  
-   background-color: #000;
-   z-index: 99;
-}
-.nav-bar{
-   
-}
-.nav-logo{
-    cursor: pointer;
-}
-
-main{
-    margin-top: 100px;
-}
-
-.hero-section{
-    justify-content: space-between;
-    align-items: normal;
-}
-.hero-pic{
-    margin-right: 100px;
-}
-.hero-text{
-    width: 400px;
-}
-.hero-text h5{
-    color: var(--primary-bg-color);
-
-}
-.hero-heading{
-    margin-top: 20px;
-    font-size: 52px;
-    margin-bottom: 20px;
-    line-height: 3.5rem;
-
-}
-
-.btn{cursor: pointer;
-    width: 170px;
-    height: 45px;
-    margin-top: 10px;
-    border: 2px solid var(--primary-bg-color);
-    background: #000;
-    color: white;
-}
-.card-box{
-    margin-top: 30px;
-    gap: 20px;
-}
-.icon{
-    font-size: 42px;
-    margin-bottom: 20px;
-    
-}
-.card{
-width: 300px;
-height: 290px;
-background-color: #141414; 
-padding: 15px 18px;
-border-radius: 7px;
-transition: 0.3s all ease;
-cursor: pointer;
-
-}
-
-.card h2{
-margin-top: 20px;
-}
-.card p{
-    margin-block: 20px;
-}
-.card:hover{
-    box-shadow: 4px 4px 9px #ccc;
-    transform: translateY(-2px);
-}
-.card-section{
-    margin-bottom: 50px;
-}
-
-
-
-.sec-card-sect{
-    background-color: #0a0908;
-    padding-bottom: 50px;
-}
-
-.final{
-    padding-block: 60px;
-}
-.final h2{
-    font-size: 32px;
-}
-.final h5{
-    margin-top: 20px;
-    color: var(--primary-bg-color);
-}
-footer{
-    text-align: center;
-    padding-bottom: 10px;
-}
-.ic{
-    padding-right: 10px;
-}
-    </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic.css" />
+  </head>
+  <body>
     <nav>
-        <div class="nav-bar flex">
-            <div class="nav-logo"><h2>HRUS</h2> </div> 
-            <div class="nav-links">
-            <ul class="flex">
-                <li class="hover-links">Home</li>
-                <li class="hover-links">Product</li>
-                <li class="hover-links">Apply</li>
-                <li class="hover-links">Money</li>
-                <li class="hover-links">Service</li>
-                <li class="hover-links">Contact</li>
-                <li class="hover-links"><i class="fa-solid fa-magnifying-glass"></i></li>
-            </ul></div>
-        </div>
-
+        <h1>TIC TAC TOE 🎮</h1>
     </nav>
-
-
-    <main>
-        <section>
-            <div class="hero-section flex container">
-     <div class="hero-text">
-            <h5>CREATIVE MENS CREATIVE WOMENS.</h5>
-            <h1 class="hero-heading">We are digital agencey.</h1>
-            <button class="btn">MITTING STARTED</button>
-        
+    <div class="game-container">
+      
+        <div class="gamebox">
+            <div class="box bl bt"><span class="gametext"></span></div>
+            <div class="box bt"><span class="gametext"></span></div>
+            <div class="box bt br"><span class="gametext"></span></div>
+            <div class="box bl"><span class="gametext"></span></div>
+            <div class="box"><span class="gametext"></span></div>
+            <div class="box br"><span class="gametext"></span></div>
+            <div class="box bl bb"><span class="gametext"></span></div>
+            <div class="box bb"><span class="gametext"></span></div>
+            <div class="box bb br"><span class="gametext"></span></div>
         </div>
-<div class="hero-pic">
-    <img width="200px" src="workphoto/dark-male.jpg" alt="">
-</div>
-        
+        <div class="text-box">
+            <p class="p">Hey hope you enjoy the game 🎉</p>
+            <p class="turn">Turn X</p>
+            <button id="btn">Reset</button>
         </div>
-        </section>
-
-        <section class="card-section">
-
-            <div class="card-box flex container">
-                <div class="card">  
-
-
-                    <i class="icon fa-brands fa-telegram"></i>
-                    <h2>Future Concept.</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At velit omnis ad!.</p>
-                </div>
-                <div class="card">
-                    <i class="icon fa-solid fa-brain"></i>
-                    <h2>The Big Ideas.</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At velit omnis ad!.</p>
-                </div>
-                <div class="card">
-                    
-                    <i class="icon fa-solid fa-virus"></i>
-                    <h2>Creative Antivirus.</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At velit omnis ad!.</p>
-                </div>
-            </div>
-   </section>
-
-   <section class="sec-card-sect">
-<div class="sec-card-cont container">
-    <div class="final">
-<h2>→ Services.</h2>
-<h5 >SOMTHINNG STUFF HERE.</h5></div>
-
-<div class="card-box flex container">
-    <div class="card">  
-
-
-        <i class="icon fa-solid fa-house"></i>
-                <h2>Future Concept.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At velit omnis ad!.</p>
     </div>
-    <div class="card">
-        <i class="icon fa-solid fa-pencil"></i>        <h2>The Big Ideas.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At velit omnis ad!.</p>
-    </div>
-    <div class="card">
-        
-        <i class="icon -brands fa-uikit"></i>
-                <h2>Creative Antivirus.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At velit omnis ad!.</p>
-    </div>
-</div>
+    <script src="tic.js"></script>
 
-
-
-
-</div>
-
-
-
-   </section>
-
-
-
-
-    </main>
-    <hr>
-    <br><br>
- <footer><i class="ic fa-solid fa-copyright"></i>copyrights reserverd by Shahbaj Khan</footer>
-
-
-
-
-
-
-
-
-    <script src="https://kit.fontawesome.com/f3fc2443a5.js" crossorigin="anonymous"></script>
-
-</body>
+  </body>
 </html>
